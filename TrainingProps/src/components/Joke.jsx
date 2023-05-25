@@ -1,4 +1,4 @@
-function Joke(props) { 
+function Joke(setup) { 
 
   return(
     <div>
