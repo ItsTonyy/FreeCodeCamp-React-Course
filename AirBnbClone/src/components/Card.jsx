@@ -1,4 +1,4 @@
-function Card({img, rating, reviewCount, country, title, price}) {
+function Card({img, rating, reviewCount, location, title, price}) {
   return (
   <div className='outer-container'>
     <div className='card-container'>
@@ -11,7 +11,7 @@ function Card({img, rating, reviewCount, country, title, price}) {
         <div className='bottom-img-1'>
           <img src="Star.png" alt="Red Star" width={15} />
           <p>{rating}</p>
-          <p className='bottom-img-2nd-p'> {reviewCount}·{country}</p>
+          <p className='bottom-img-2nd-p'> {reviewCount}·{location}</p>
         </div>
         
         <div className='bottom-img-2'>

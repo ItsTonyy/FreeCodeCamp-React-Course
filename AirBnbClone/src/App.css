@@ -1,6 +1,6 @@
 .container {
   width: 550px;
-  height: 853px;
+  height: fit-content;
   background-color: #FFFFFF;
   border-radius: 10px;
   font-family: Poppins, sans-serif;
@@ -101,6 +101,21 @@ body {
   margin-top: 5px;
   margin-bottom: -5px;
 }
+
+/* estudo de map(), desconsidere no futuro:*/
+
+img {
+  width: 160px;
+}
+
+.starImg {
+  width: 15px;
+}
+
+.bold {
+  font-weight: 600;
+}
+
 
 
 
