@@ -1,10 +1,11 @@
 .container {
-  width: 550px;
+  width: 800px;
   height: fit-content;
   background-color: #FFFFFF;
   border-radius: 10px;
   font-family: Poppins, sans-serif;
 }
+
 
 body {
   display: flex;
@@ -49,21 +50,6 @@ body {
 
 /* Card Style */
 
-.outer-container {
-  display: flex;
-  flex-direction: row;
-}
-
-.card-container {
-  margin-top: -30px;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-}
-
-.Card-img {
-  position: relative;
-}
 
 .SoldOut {
   position: absolute;
@@ -104,17 +90,73 @@ body {
 
 /* estudo de map(), desconsidere no futuro:*/
 
-img {
-  width: 160px;
+.cards-section {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.card-img {
+  width: 100%;
+  height: 240px;
+  border-radius: 8px;
 }
 
 .starImg {
   width: 15px;
 }
 
-.bold {
-  font-weight: 600;
+.card-title {
+  margin-bottom: 10px;
+
 }
+
+/* (C) */
+
+.card {
+  width: 175px;
+  font-size: 12px;
+  flex: 0 0 auto;         /* ADD */
+  display: flex;          /* ADD */
+  flex-direction: column; /* ADD */
+  padding: 5px;
+  position: relative;
+}
+
+.card--image {
+  width: 100%;
+  border-radius: 9px;
+  margin-bottom: 9px;
+}
+
+.card--stats {
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  gap: 1px;
+}
+
+.card--star {
+  height: 14px;
+}
+
+/* SOLD OUT (C)*/
+
+.card--price {
+  margin-top: auto;
+}
+
+.card--badge {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  background-color: white;
+  padding: 3px 5px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+
 
 
 

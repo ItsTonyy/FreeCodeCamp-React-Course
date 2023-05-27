@@ -25,7 +25,9 @@ function App() {
     <>
     <div className="container">
       <NavBar />
-      {CardsMap}
+      <section className='cards-section'>
+        {CardsMap}
+      </section>
 
     </div>
     </>
