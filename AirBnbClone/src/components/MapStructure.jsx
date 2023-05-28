@@ -1,7 +1,14 @@
 function MapStructured({coverImg, rating, reviewCount, location, title, price, openSpots}) {
+  let badgeText
+    if (openSpots === 0) {
+        badgeText = "SOLD OUT"
+    } else if (location === "Online") {
+        badgeText = "ONLINE"
+    } 
+
   return(
     <div className="card">
-      {openSpots === 0 && <div className='card--badge'>SOLD OUT</div>}
+      {badgeText && <div className='card--badge'>{badgeText}</div>}
       <img src={coverImg} alt="imagem" className='card-img' />
       <div className="card--stats">
         <img src="Star.png" className="starImg" />
