@@ -1,8 +1,9 @@
 function Header() {
   return(
     <div className='header'>
-      <img src="/Logo.png" alt="logo-troll-face" className='troll-logo' width={178} height={26}/>
-      <p>React Course - Project 3</p>
+      <img src="trollFace.png" alt="trollface" width={32}/>
+      <h2 className='header-h2'>Meme Generator</h2>      
+      <h4 className='header-h4'>React Course - Project 3</h4>
     </div>
     
   )
