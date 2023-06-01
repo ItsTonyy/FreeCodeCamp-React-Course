@@ -87,5 +87,12 @@ body {
   background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
 }
 
+.form-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+}
+
 
 
