@@ -2,21 +2,18 @@ import { useState } from 'react'
 import memesData from './memesData'
 
 function Form() {
+  const [memeImage, setMemeImage] = useState('')
+  
 
   function GetMemeImage() {
     const memesArray = memesData.data.memes
     const randomNumber = Math.floor(Math.random() * memesArray.length)
-    useState(memesArray[randomNumber].url) 
-    const memeImage = useState('')
+    setMemeImage(memesArray[randomNumber].url)
   }
-
-
-  
-
 
   return (
     <div className='form'>
-      <form className="form">
+      <main className="form">
         <div className='inputs'>
           <input 
             type="text"
@@ -32,13 +29,16 @@ function Form() {
         </div>
         
         <div className="button-div">
-          <button className="form-button">
-            Get a new meme image 🖼️
+          <button
+           className="form-button"
+           onClick={GetMemeImage}
+           > Get a new meme image 🖼️
           </button>
         </div>
         
-    </form>
-    <img src={GetMemeImage} alt="imagem" className='form-image' />
+    </main>
+
+    <img src={memeImage}/>
     </div>
   )
 }

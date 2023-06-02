@@ -1,6 +1,6 @@
 import './App.css'
 import Header from '../components/header'
-import Form from '../components/form'
+import Form from '../components/Form'
 
 function App() {
 
@@ -11,7 +11,6 @@ function App() {
         <div className='content'>
           <Form />
         </div>
-        
       </div>
     </>
   )
