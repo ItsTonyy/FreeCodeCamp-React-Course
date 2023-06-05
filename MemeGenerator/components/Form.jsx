@@ -2,13 +2,23 @@ import { useState } from 'react'
 import memesData from './memesData'
 
 function Form() {
-  const [memeImage, setMemeImage] = useState('')
-  
+
+  const [meme, setMeme] = useState({
+      topText: '',
+      bottomText: '',
+      randomImage: 'https://corhexa.com/png/600x300/f0f0f0'
+  })
+
+  const [allMemeImages, setAllMemeImages] = useState(memesData)
 
   function GetMemeImage() {
-    const memesArray = memesData.data.memes
+    const memesArray = allMemeImages.data.memes
     const randomNumber = Math.floor(Math.random() * memesArray.length)
-    setMemeImage(memesArray[randomNumber].url)
+    const url = memesArray[randomNumber].url
+    setMeme(prevMeme => ({
+      ...prevMeme,
+      randomImage: url
+    }))
   }
 
   return (
@@ -38,7 +48,7 @@ function Form() {
         
     </main>
 
-    <img src={memeImage}/>
+    <img src={meme.randomImage}/>
     </div>
   )
 }

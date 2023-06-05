@@ -10,12 +10,13 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  transition: 0.5s;
 }
 
 .container {
-  background-color: #f5f5f5;
-  width: 1010px;
-  height: 800px;
+  background-color: #f0f0f0;
+  width: fit-content;
+  height: fit-content;
   border-radius: 15px 15px 12px 12px;
 }
 
