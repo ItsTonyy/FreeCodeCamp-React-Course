@@ -1,7 +1,13 @@
-import { useState } from 'react'
-import memesData from './memesData'
+import { useEffect, useState } from 'react'
+
 
 function Form() {
+
+  useEffect(() => {
+    fetch('https://api.imgflip.com/get_memes')
+    .then(res => res.json())
+    .then(data => setAllMeme(data.data.memes))
+  }, [])
 
   const [meme, setMeme] = useState({
       topText: '',
@@ -9,12 +15,11 @@ function Form() {
       randomImage: 'https://corhexa.com/png/600x300/f0f0f0'
   })
 
-  const [allMemeImages, setAllMemeImages] = useState(memesData)
+  const [allMeme, setAllMeme] = useState([])
 
   function GetMemeImage() {
-    const memesArray = allMemeImages.data.memes
-    const randomNumber = Math.floor(Math.random() * memesArray.length)
-    const url = memesArray[randomNumber].url
+    const randomNumber = Math.floor(Math.random() * allMeme.length)
+    const url = allMeme[randomNumber].url
     setMeme(prevMeme => ({
       ...prevMeme,
       randomImage: url
@@ -22,7 +27,7 @@ function Form() {
   }
 
   function handleChange(event) {
-    const {value, name } = event.target
+    const {value, name} = event.target
     setMeme(prevMeme => ({
       ...prevMeme,
       [name]: value
