@@ -4,9 +4,12 @@ import { useEffect, useState } from 'react'
 function Form() {
 
   useEffect(() => {
-    fetch('https://api.imgflip.com/get_memes')
-    .then(res => res.json())
-    .then(data => setAllMeme(data.data.memes))
+    async function getMemes() {
+      const res = await fetch("https://api.imgflip.com/get_memes")
+      const data = await res.json()
+      setAllMemes(data.data.memes)
+    }
+    getMemes()
   }, [])
 
   const [meme, setMeme] = useState({
@@ -15,7 +18,7 @@ function Form() {
       randomImage: 'https://corhexa.com/png/600x300/f0f0f0'
   })
 
-  const [allMeme, setAllMeme] = useState([])
+  const [allMeme, setAllMemes] = useState([])
 
   function GetMemeImage() {
     const randomNumber = Math.floor(Math.random() * allMeme.length)
