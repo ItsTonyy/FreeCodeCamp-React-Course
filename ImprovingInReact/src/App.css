@@ -1,7 +1,8 @@
 #root {
   margin: 0 auto;
-  background-color: #282D35;
+  background-color: #f2f2f2;
   border-radius: 15px;
+  color: black;
 }
 
 body {
@@ -11,7 +12,6 @@ body {
 /* Nav Above*/
 
 nav {
-  background-color: #21222A;
   border-radius: 15px 15px 0px 0px;
   padding: 0.8rem 1.8rem 0.8rem 1.8rem;
   align-items: center;
@@ -25,6 +25,84 @@ h3 {
   color:#DEEBF8;
 }
 
+nav.dark {
+  background-color: #21222A;
+}
+
+.nav--logo_icon {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.nav--logo_text {
+  color: #61DAFB;
+  margin-right: auto;
+}
+
+.nav--title {
+  color: #DEEBF8;
+}
+
+.toggler {
+  display: flex;
+  align-items: center;
+}
+
+.toggler p {
+  font-size: 0.825rem;
+  font-weight: 600;
+}
+
+.toggler--slider {
+  width: 27px;
+  height: 15px;
+  background-color: #2B283A;
+  border-radius: 2rem;
+  margin-inline: 7px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid black;
+  box-sizing: content-box;
+}
+
+nav.dark .toggler--slider {
+  border-color: white;
+  background-color: #F5F5F5;
+}
+
+.toggler--slider--circle {
+  height: 15px;
+  width: 15px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+nav.dark .toggler--slider--circle {
+  background-color: black;
+}
+
+.toggler--light {
+  color: #2B283A;
+}
+
+nav.dark .toggler--light {
+  color: #918E9B;
+}
+
+.toggler--dark {
+  color: #D5D4D8;
+}
+
+nav.dark .toggler-dark {
+  color: #FFFFFF;
+}
+
+nav.dark .toggler--slider {
+  justify-content: flex-end;
+}
+
 /* MainContent Above */
 
 main {
@@ -35,8 +113,7 @@ main {
   /* styling the main background image */
   background-image: url(/reactjs-icon2.png);
   background-repeat: no-repeat;
-  background-position-x: right;
-  background-position-y: bottom;
+  background-position: right center
 }
 
 ul {
