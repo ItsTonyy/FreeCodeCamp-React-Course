@@ -108,12 +108,20 @@ nav.dark .toggler--slider {
 main {
   display: flex;
   flex-direction: column;
-  padding: 2.3rem 1.8rem 0.8rem 1.8rem;
+  padding: 2.3rem 1.8rem 6.5rem 1.8rem;
 
   /* styling the main background image */
-  background-image: url(/reactjs-icon2.png);
+  background-image: url(/ReactLogoWhiteMode.png);
   background-repeat: no-repeat;
-  background-position: right center
+  background-position: right top;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+main.dark {
+    background-image: url("./public/ReactLogoDarkMode.png"); 
+    background-color: #282D35;
+    color: white;  
 }
 
 ul {
