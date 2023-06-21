@@ -1,9 +1,7 @@
 import './App.css'
-import NavBar from './components/NavBar'
-import Hero from './components/Hero'
-import Card from './components/Card'
-import arrayData from './components/arrayData'
 import MapStructured from './components/MapStructure'
+import NavBar from './components/NavBar'
+import arrayData from './components/arrayData'
 
 
 function App() {
